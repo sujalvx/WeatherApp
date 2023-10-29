@@ -1,5 +1,8 @@
 # Weather App By Sujal Verma
+
+#Please create your own API key to use this application. Thank You
 APIkey =''
+
 # All imports.
 from tkinter import *
 from PIL import ImageTk,Image
@@ -73,7 +76,7 @@ def weather():
         # name.config(text=f'CURRENT WEATHER of')
         name2.config(text=city)
 
-        api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid={APIKEY}"
+        api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APIkey
 
         jsondata = requests.get(api).json()
         condition1 = jsondata['weather'][0]['description']
@@ -107,4 +110,4 @@ clock.place(x=552,y=130)
 #Ending 
 main.mainloop()
 
-#Please create your own API key to use this application. Thank You
+
